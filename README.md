@@ -58,12 +58,13 @@ todos
 
 ## Node.jsの導入
 
-###nvmのインストール  
+### nvmのインストール  
 
-`$ git clone https://github.com/creationix/nvm.git ~/.nvm`    
+`$ git clone https://github.com/creationix/nvm.git ~/.nvm`  
+
 `$ source ~/.nvm/nvm.sh`  
 
-###nvmコマンドでnode.jsをインストール  
+### nvmコマンドでnode.jsをインストール  
 
 `$ nvm install 7.9.0`  
 
@@ -73,12 +74,13 @@ todos
 
 `$ cd . && npm install ` 必要なnode_modulesをinstall  
 
-###モジュール　　
+### モジュール　　
 
 [nodemon](https://github.com/remy/nodemon)  
+
 `$ npm i -g nodemon`  
 
-###ライブラリ  
+### ライブラリ  
 
 [Moment.js](http://momentjs.com)  
 
@@ -88,7 +90,7 @@ todos
 
 `$ npm install --save mysql`  
 
-##サーバー起動  
+## サーバー起動  
 
 `$ nodemon todoApp`  
 `localhost:3000`に接続  
