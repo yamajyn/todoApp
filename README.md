@@ -102,9 +102,13 @@ mysql接続のためのライブラリ
 
 ## 独自機能  
 
+![todoトップ](https://github.com/yamaj/todoApp/blob/master/readmeImages/todo_todo.png)  
+
+
 *リストの削除  
 *todoの削除  
-*期限が近い順に並べ替え   
+*期限が近い順に並べるようにした  
+
 
 
 
