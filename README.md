@@ -12,31 +12,26 @@ EJS
 MySQL version: 5.7.17 Homebrew
 
 
-## 設計・構成について  
-root/  
-　├ bin/www  
-　│
-　├ node_modules/  
-　│  
-　├ public/  
-　│　├ images/  
-　│　├ javascripts/  
-　│　└ stylesheets/  
-　├ routes/
-　├ views/
-　├ usr/  
-　│　└ local/  
-　│　　　└ bin/  
-　└ lib/  
+## 設計・構成について  
+
+* root/  
+    * bin/www  
+    * node_modules  
+    * public  
+    * routes  
+    * views  
+    * app.js  
+    * mysqlConnection.js  
+    * package.json  
+
+###DB  
+DB名 todo_list 
+
+テーブル  
  
-| Left align | Right align | Center align |  
-|:-----------|------------:|:------------:|  
-| This       | This        | This         |  
-| column     | column      | column       |  
-| will       | will        | will         |  
-| be         | be          | be           |  
-| left       | right       | center       |  
-| aligned    | aligned     | aligned      |  
+| list_id    | title       | created_at    |  　
+|:-----------|:------------|:-------------| 
+| INT        | VARCHAR     | DATETIME     |  
 
 ## 開発環境のセットアップ  
 
