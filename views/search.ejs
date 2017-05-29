@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+<% layout('layout') %>
+<p class="main-title">検索</p>
+  <ul class="main-list">
+    <!-- 検索フォーム -->
+    <form action="/search/" method="post" class="search-form">
+      <input type="text" name="search" class="search-input input" value="<%=search%>" required><br>
+      <button type="submit" class="submit">検索</button>
+    </form>
+    <!-- list検索結果 -->
+    <% if (lists.length) { %>
+      <p>ToDoリストが<%=lists.length%>件見つかりました</p>
+      <% lists.forEach(function(listItem) { %>
+        <li class="main-list__item">
+          <a href="/todos/<%= listItem.list_id %>" class="list">
+              <p class="list__title"><%= listItem.title %></p>
+              <p class="list__date">作成日:<%= listItem.created_at %></p>
+          </a>
+        </li>
+      <% });%>
+  </ul>
+  <!-- listがない時のエラー表示 -->
+  <%}else if(search != ''){%>
+    <p class="error"><%= noList %></p>
+  <%}%>
+  <br style="clear:left;">
+
+  <!-- todo検索結果 -->
+  <% if (typeof todos !== 'undefined') {
+    if (todos.length) { %>
+      <ul class="main-list">
+      <p>ToDoが<%=todos.length%>件見つかりました</p>
+      <!-- todo一覧 -->
+      <% todos.forEach(function(todoItem) { %>
+        <li class="main-list__item">
+          <div class="todo">
+            <p class="list__title"><%= todoItem.todo %></p>
+            <p class="list__date">作成:<%= todoItem.created_at %></p>
+            <p class="todo__date">期限:<%= todoItem.timelimit %></p>
+            <!-- 完了ボタン -->
+            <form action="/todos/<%= todoItem.list_id %>" method="post">
+              <% if (todoItem.done) { %>
+                <button type="submit" name="done" value="<%= todoItem.todo_id %>" class="submit comp-btn comp">
+                  完了
+                </button>
+              <% } else{ %>
+                <button type="submit" name="done" value="<%= todoItem.todo_id %>" class="submit comp-btn uncomp">
+                  未完了
+                </button>
+              <% } %>
+            </form>
+          </div>
+        </li>
+      <% }); %>
+      </ul>
+      <!-- todoがない時のエラー表示 -->
+    <% }else if(search != ''){%>
+      <div class="error-wrapper">
+      <div class="error"><%= noTodo %></div>
+      </div>
+      <a href="/" class="btn"><p>トップへもどる</p></a>
+    <%}
+  }%>
+</body>
+</html>
