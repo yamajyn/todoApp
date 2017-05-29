@@ -2,6 +2,7 @@
 ToDoを管理するWEBアプリケーション  
 ![todoトップ](https://github.com/yamaj/todoApp/blob/master/readmeImages/todo_top.png)  
 
+
 ## 開発環境　
 macOS Sierra  v10.12.4  
 Node.js v7.10.0  
@@ -56,7 +57,7 @@ todos
 | INT        | INT         | TEXT         |DATE        | DATETIME   | TYNYINT    |  
 
 
-## 開発環境のセットアップ
+## 開発環境のセットアップ　　
 
 ## Node.jsの導入
 
@@ -96,6 +97,10 @@ mysql接続のためのライブラリ
 プロジェクトのディレクトリに移動後  
 `$ nodemon todoApp`  
 で起動  
+
+もしくは  
+`$ node ./bin/www`  
+で起動
 
 ブラウザから  
 `localhost:3000`に接続  
