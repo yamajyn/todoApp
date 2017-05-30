@@ -81,9 +81,9 @@ todos
 
 ### モジュール　　
 
-[nodemon](https://github.com/remy/nodemon)  
-ファイル更新時に自動でローカルサーバーを再起動してくれるmodule
-`$ npm i -g nodemon`  
+[nodemon](https://github.com/remy/nodemon)    
+ファイル更新時に自動でローカルサーバーを再起動してくれるmodule  
+`$ npm i -g nodemon`  
 
 [ejs-locals](https://github.com/RandomEtc/ejs-locals)  
 部品を共通化するためのmodule  
