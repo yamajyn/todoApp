@@ -4,9 +4,9 @@ ToDoを管理するWEBアプリケーション
 
 
 ## 開発環境　
-macOS Sierra  v10.12.4
-Node.js v7.10.0
-safari v10.1
+macOS Sierra  v10.12.4  
+Node.js v7.10.0  
+safari v10.1  
 ## フレームワーク
 Express v4.15.0
 ## template engine
