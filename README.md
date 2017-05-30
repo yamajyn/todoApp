@@ -27,12 +27,12 @@ MySQL version: 5.7.17 Homebrew
     * javascripts
     * stylesheets
   * routes/
-    * モデル
-  * views/
+    * コントローラー  
+  * views/
     * ビュー
   * app.js
-    * コントローラ
-  * mysqlConnection.js
+    * expressの設定  
+  * mysqlConnection.js
     * データーベース接続 
   * package.json  
     * npmモジュールの管理
