@@ -1,12 +1,12 @@
 # todoApp
-ToDoを管理するWEBアプリケーション  
+ToDoを管理するWEBアプリケーション
 ![todoトップ](https://github.com/yamaj/todoApp/blob/master/readmeImages/todo_top.png)  
 
 
 ## 開発環境　
-macOS Sierra  v10.12.4  
-Node.js v7.10.0  
-safari v10.1  
+macOS Sierra  v10.12.4
+Node.js v7.10.0
+safari v10.1
 ## フレームワーク
 Express v4.15.0
 ## template engine
@@ -27,12 +27,12 @@ MySQL version: 5.7.17 Homebrew
     * javascripts
     * stylesheets
   * routes/
-    * コントローラー  
-  * views/
+    * コントローラー
+  * views/
     * ビュー
   * app.js
-    * expressの設定  
-  * mysqlConnection.js
+    * expressの設定
+  * mysqlConnection.js
     * データーベース接続 
   * package.json  
     * npmモジュールの管理
@@ -45,15 +45,15 @@ DB名 todo_list
 
 lists
 
-| list_id    | title       | created_at   |  
-|:-----------|:------------|:-------------|  
+| list_id    | title       | created_at   |
+|:-----------|:------------|:-------------|
 | INT        | VARCHAR     | DATETIME     |  
 
 
 todos
 
-| list_id    | todo_id     | todo         | timelimit  |created_at  | done       |  
-|:-----------|:------------|:-------------|:-----------|:-----------|:-----------| 
+| list_id    | todo_id     | todo         | timelimit  |created_at  | done       |
+|:-----------|:------------|:-------------|:-----------|:-----------|:-----------|
 | INT        | INT         | TEXT         |DATE        | DATETIME   | TYNYINT    |  
 
 
@@ -63,38 +63,38 @@ todos
 
 ### nvmのインストール  
 
-`$ git clone https://github.com/creationix/nvm.git ~/.nvm`  
+`$ git clone https://github.com/creationix/nvm.git ~/.nvm`
 
 `$ source ~/.nvm/nvm.sh`  
 
 ### nvmコマンドでnode.jsをインストール  
 
-`$ nvm install 7.9.0`  
+`$ nvm install 7.9.0`
 
-`$ npm i -g express-generator`express-generatorの導入  
+`$ npm i -g express-generator`express-generatorの導入
 
-`$ express -e`expressの雛形アプリを作成  
+`$ express -e`expressの雛形アプリを作成
 
-`$ cd . && npm install ` 必要なnode_modulesをinstall  
+`$ cd . && npm install ` 必要なnode_modulesをinstall
 
 ### モジュール　　
 
 [nodemon](https://github.com/remy/nodemon)  
-ファイル更新時に自動でローカルサーバーを再起動してくれるmodule  
+ファイル更新時に自動でローカルサーバーを再起動してくれるmodule
 `$ npm i -g nodemon`  
 
 ### ライブラリ  
 
 [Moment.js](http://momentjs.com)  
-日付取得のライブラリ  
+日付取得のライブラリ
 `$ npm i -S moment`  
 
 [Mysql](https://github.com/mysqljs/mysql)  
-mysql接続のためのライブラリ  
+mysql接続のためのライブラリ
 `$ npm install --save mysql`  
 
 ## サーバー起動  
-プロジェクトのディレクトリに移動後  
+プロジェクトのディレクトリに移動後
 `$ nodemon todoApp`  
 で起動  
 
@@ -102,18 +102,14 @@ mysql接続のためのライブラリ
 `$ node ./bin/www`  
 で起動
 
-ブラウザから  
+ブラウザから
 `localhost:3000`に接続  
 
-## 独自機能  
+## 独自機能
 
-![todoトップ](https://github.com/yamaj/todoApp/blob/master/readmeImages/todo_todo.png)  
+![todoトップ](https://github.com/yamaj/todoApp/blob/master/readmeImages/todo_todo.png)
 
 
-*リストの削除  
+*リストの削除
 *todoの削除  
 *期限が近い順に並べるようにした  
-
-
-
-
