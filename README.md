@@ -77,6 +77,8 @@ todos
 
 `$ cd . && npm install ` 必要なnode_modulesをinstall
 
+## 追加したモジュール
+
 ### モジュール　　
 
 [nodemon](https://github.com/remy/nodemon)  
@@ -110,6 +112,6 @@ mysql接続のためのライブラリ
 ![todoトップ](https://github.com/yamaj/todoApp/blob/master/readmeImages/todo_todo.png)
 
 
-*リストの削除
-*todoの削除  
-*期限が近い順に並べるようにした  
+* リストの削除
+* todoの削除  
+* 期限が近い順に並べるようにした  
