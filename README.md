@@ -85,6 +85,10 @@ todos
 ファイル更新時に自動でローカルサーバーを再起動してくれるmodule
 `$ npm i -g nodemon`  
 
+[ejs-locals](https://github.com/RandomEtc/ejs-locals)  
+部品を共通化するためのmodule  
+`$ npm install ejs-locals --save`  
+
 ### ライブラリ  
 
 [Moment.js](http://momentjs.com)  
