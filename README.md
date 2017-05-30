@@ -77,8 +77,8 @@ express-generatorの導入
 expressの雛形アプリを作成  
 `$ express -e`  
 
-必要なnode_modulesをinstall  
-`$ cd . && npm install ` 
+必要なnode_modulesをinstall  
+`$ cd . && npm install `  
 
 ## 追加したモジュール
 
