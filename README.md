@@ -69,13 +69,16 @@ todos
 
 ### nvmコマンドでnode.jsをインストール  
 
-`$ nvm install 7.9.0`
+`$ nvm install 7.9.0`  
 
-`$ npm i -g express-generator`express-generatorの導入
+express-generatorの導入  
+`$ npm i -g express-generator` 
 
-`$ express -e`expressの雛形アプリを作成
+expressの雛形アプリを作成  
+`$ express -e`  
 
-`$ cd . && npm install ` 必要なnode_modulesをinstall
+必要なnode_modulesをinstall  
+`$ cd . && npm install ` 
 
 ## 追加したモジュール
 
