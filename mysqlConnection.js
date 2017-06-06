@@ -8,7 +8,7 @@ var mysql = require('mysql');
 //   database: 'todo_list'
 // };
 
-// リリース用
+//リリース用
 var dbConfig = {
   host: 'us-cdbr-iron-east-03.cleardb.net',
   user: 'ba09dd9960344c',
@@ -18,7 +18,7 @@ var dbConfig = {
 
 var connection = mysql.createConnection(dbConfig);
 
-HerokuのMySQLのためのハック
+//HerokuのMySQLのためのハック
 setInterval(function() {
   connection.query('SELECT 1');
 }, 5000);
