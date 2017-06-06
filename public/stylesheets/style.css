@@ -409,11 +409,11 @@ input:focus::-webkit-input-placeholder {
 		background-color: #d2a1be;
 }
 .error-wrapper{
-	width:100%;
+	width:90%;
 }
 .error {
     padding: 10px;
-    margin: 10px 20% 0 29%;
+    margin:auto;
 		width:40%;
     font-weight: bold;
 		text-align: center;

@@ -29,11 +29,14 @@
           </a>
         </li>
       <% });%>
-  </ul>
-  <!-- listがない時のエラー表示 -->
-  <%}else if(search != ''){%>
-    <p class="error"><%= noList %></p>
-  <%}%>
+      </ul>
+    <!-- listがない時のエラー表示 -->
+    <%}else if(search != ''){%>
+      <div class="error-wrapper">
+      <p class="error"><%= noList %></p>
+      </div>
+    <%}%>
+
   <br style="clear:left;">
 
   <!-- todo検索結果 -->
