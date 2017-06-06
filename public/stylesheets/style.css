@@ -26,7 +26,7 @@ header{
 	position:fixed;
   background-color:#E2F5FA;
 	box-shadow:0px 1px 3px rgba(0,0,0,0.3);
-  z-index:10;
+  z-index:9;
 }
 header:active{
 	box-shadow:0px 1px 1px rgba(0,0,0,0.3);
@@ -128,7 +128,7 @@ input:-webkit-autofill, textarea:-webkit-autofill {
     font-weight: bold;
 }
 .main-list__item {
-    margin-top: 10px;
+    margin: 10px 0;
 }
 .main-list__item:first-child {
     margin-top: 0;
@@ -141,8 +141,8 @@ input:-webkit-autofill, textarea:-webkit-autofill {
     padding: 10px;
 		margin:1%;
     background-color: #fff;
-		box-shadow:0px 3px 6px rgba(0,0,0,0.1);
-		border-radius: 25px 0px;
+		box-shadow:0 3px 6px rgba(0,0,0,0.1);
+		border-radius: 25px 0;
 		float:left;
 		overflow: scroll;
 		transition:0.3s ease;
@@ -171,7 +171,7 @@ input:-webkit-autofill, textarea:-webkit-autofill {
 .list__title {
     margin: 20px 30px;
 		text-align:justify;
-		padding:0px;
+		padding:0;
     font-size: 30px;
 		float:left;
 }
@@ -191,8 +191,8 @@ input:-webkit-autofill, textarea:-webkit-autofill {
     padding: 10px;
 		margin:1%;
     background-color: #fff;
-		box-shadow:0px 3px 6px rgba(0,0,0,0.1);
-		border-radius: 25px 0px;
+		box-shadow:0 3px 6px rgba(0,0,0,0.1);
+		border-radius: 25px 0;
 		float:left;
 		overflow: scroll;
 		transition:0.3s ease;
@@ -229,14 +229,14 @@ input:-webkit-autofill, textarea:-webkit-autofill {
 }
 .todo__done{
 	position:absolute;
-	bottom:0px;
+	bottom:0;
 	right:40px;
 	font-size: 40px;
 	font-weight: bold;
 }
 .todo__count{
 	position:absolute;
-	bottom:0px;
+	bottom:0;
 	right:10px;
 	font-size: 30px;
 	font-weight: bold;
@@ -262,7 +262,7 @@ input:-webkit-autofill, textarea:-webkit-autofill {
 		position:relative;
     display: inline-block;
     padding: 10px;
-		margin: 5px auto 0px auto;
+		margin: 5px auto 0 auto;
     font-size: 22px;
     vertical-align: middle;
 		border-radius: 5px;
@@ -281,8 +281,8 @@ input:focus::-webkit-input-placeholder {
 .search-form{
 	position:relative;
 	display: block;
-	width:80%;
-	height:150px;
+	width:85%;
+	height:100px;
 	padding: 10px;
 	margin:1%;
 	text-align: center;
@@ -291,6 +291,7 @@ input:focus::-webkit-input-placeholder {
 		background-color: #ffffff;
 		box-shadow:1px 1px 2px rgba(0,0,0,0.1);
 		transition: 0.5s ease;
+		margin:0;
 }
 .search-input:hover {
 	box-shadow:2px 2px 3px rgba(0,0,0,0.2);
@@ -302,7 +303,7 @@ input:focus::-webkit-input-placeholder {
 		height:50px;
 		margin:75px 7%;
 		background-color: #fff;
-		box-shadow:0px 3px 6px rgba(0,0,0,0.1);
+		box-shadow:0 3px 6px rgba(0,0,0,0.1);
 		border-radius: 100px;
 		float:left;
 		transition:0.3s ease;
@@ -311,18 +312,18 @@ input:focus::-webkit-input-placeholder {
 		transition:0.5s ease;
 }
 .btn:hover{
-	box-shadow:0px 3px 6px rgba(0,0,0,0.2);
+	box-shadow:0 3px 6px rgba(0,0,0,0.2);
 	transition:0.1s ease;
 }
 .btn:active{
 		background-color: #ededed;
-		box-shadow:0px 1px 2px rgba(0,0,0,0.1);
+		box-shadow:0 1px 2px rgba(0,0,0,0.1);
 }
 .btn p{
 	display: block;
 	margin-top:17px;
 	text-align: center;
-	padding:0px 10px;
+	padding:0 10px;
 }
 .submit {
     display:block;
@@ -335,7 +336,7 @@ input:focus::-webkit-input-placeholder {
     vertical-align: middle;
     background-color: #BBE0EA;
 		border-radius: 50px;
-		box-shadow:0px 1px 3px rgba(0,0,0,0.3);
+		box-shadow:0 1px 3px rgba(0,0,0,0.3);
     -webkit-appearance: none;
 		transition:0.3s ease;
 }
@@ -344,7 +345,7 @@ input:focus::-webkit-input-placeholder {
 		transition:0.1s ease;
 }
 .submit:active{
-		box-shadow:0px 1px 1px rgba(0,0,0,0.3);
+		box-shadow:0 1px 1px rgba(0,0,0,0.3);
 		background-color: #96BDC7;
 }
 .delete{
@@ -368,7 +369,7 @@ input:focus::-webkit-input-placeholder {
 	height:13px;
 	border-radius: 20px;
 	z-index: 10;
-	box-shadow:0px 1px 3px rgba(0,0,0,0.3);
+	box-shadow:0 1px 3px rgba(0,0,0,0.3);
 	transition:0.1s ease;
 }
 .delete__todo p{
@@ -384,7 +385,7 @@ input:focus::-webkit-input-placeholder {
 }
 .delete__todo:active{
 	background-color: #c48970;
-	box-shadow:0px 1px 1px rgba(0,0,0,0.3);
+	box-shadow:0 1px 1px rgba(0,0,0,0.3);
 	transition:0.1s ease;
 }
 .comp-btn{
@@ -412,11 +413,126 @@ input:focus::-webkit-input-placeholder {
 }
 .error {
     padding: 10px;
-    margin: 10px 20% 0px 29%;
+    margin: 10px 20% 0 29%;
 		width:40%;
     font-weight: bold;
 		text-align: center;
 		border-radius: 30px;
     color: #fff;
     background-color: #F08080;
+}
+
+
+@media screen and (max-width:481px) {
+	html{
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+	}
+
+	header a{
+		width:100%;
+		margin-top:8px;
+		text-align: center;
+		font-family: "Rounded Mplus 1c",sans-serif;
+		font-size:40px;
+		display: block;
+		text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+	}
+
+	.search{
+		width:15%;
+		padding-top:10px;
+		background-color:#F4F8F8;
+		border-radius: 3px;
+		font-size:10px;
+		height:30px;
+		position:absolute;
+		right:10px;
+		top:10px;
+		box-shadow:1px 1px 2px rgba(0,0,0,0.1);
+		text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+		transition:0.3s ease;
+		z-index: 10;
+	}
+
+	.main-list{
+			margin:0 10px 0 10px;
+			padding-bottom:10px;
+			width:100%;
+			overflow: visible;
+	}
+	.main-title {
+	    margin: 70px 10% 0 10%;
+	    font-size: 30px;
+	    font-weight: bold;
+			text-align: center;
+	}
+	.list {
+			position:relative;
+	    display: block;
+			width:95%;
+			height:120px;
+	    padding: 0;
+			margin:10px auto 10px auto;
+	    background-color: #fff;
+			box-shadow:0 3px 6px rgba(0,0,0,0.1);
+			border-radius: 25px 0px;
+			overflow: hidden;
+			transition:0.3s ease;
+	}
+	.list__title {
+	    margin: 35px 30px;
+			text-align:justify;
+			padding:0;
+	    font-size: 30px;
+			overflow: hidden;
+	}
+	.list-form {
+			position:relative;
+			display: block;
+			width:90%;
+			height:100px;
+			padding: 10px;
+			margin:10px auto 100px auto;
+	    text-align: center;
+			background-color:#E2F5FA;
+			border-radius: 25px;
+			box-shadow:0px 1px 3px rgba(0,0,0,0.3);
+	}
+
+	.todo {
+			position:relative;
+	    display: block;
+			width:90%;
+			height:120px;
+			margin:10px auto 10px auto;
+	    background-color: #fff;
+			box-shadow:0 3px 6px rgba(0,0,0,0.1);
+			border-radius: 25px 0;
+			overflow: hidden;
+			transition:0.3s ease;
+	}
+
+	.todo-form {
+			position:relative;
+			display: block;
+			width:90%;
+			height:150px;
+			float:left;
+			padding: 10px;
+			margin:10px auto 100px auto;
+	    text-align: center;
+			background-color:#E2F5FA;
+			border-radius: 25px;
+			box-shadow:0px 1px 3px rgba(0,0,0,0.3);
+	}
+
+	.delete{
+		position:absolute;
+		background-color: #e7855b;
+		transition:0.2s ease;
+		width:80px;
+		right:5%;
+		top:70px;
+		font-size: 8px;
+	}
 }
