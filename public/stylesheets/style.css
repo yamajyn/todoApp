@@ -194,7 +194,7 @@ input:-webkit-autofill, textarea:-webkit-autofill {
 		box-shadow:0 3px 6px rgba(0,0,0,0.1);
 		border-radius: 25px 0;
 		float:left;
-		overflow: scroll;
+		overflow: hidden;
 		transition:0.3s ease;
 }
 .todo:hover{
@@ -368,7 +368,7 @@ input:focus::-webkit-input-placeholder {
 	width:30px;
 	height:13px;
 	border-radius: 20px;
-	z-index: 10;
+	z-index: 5;
 	box-shadow:0 1px 3px rgba(0,0,0,0.3);
 	transition:0.1s ease;
 }
@@ -377,7 +377,7 @@ input:focus::-webkit-input-placeholder {
 }
 .delete__todo:hover p{
 	visibility: visible;
-	z-index: 10;
+	z-index: 5;
 }
 .delete__todo:hover{
 	box-shadow:1px 2px 5px rgba(0,0,0,0.3);
@@ -461,7 +461,7 @@ input:focus::-webkit-input-placeholder {
 			overflow: visible;
 	}
 	.main-title {
-	    margin: 70px 10% 0 10%;
+	    margin: 100px 10% 0 10%;
 	    font-size: 30px;
 	    font-weight: bold;
 			text-align: center;
@@ -503,7 +503,7 @@ input:focus::-webkit-input-placeholder {
 			position:relative;
 	    display: block;
 			width:90%;
-			height:120px;
+			height:auto;
 			margin:10px auto 10px auto;
 	    background-color: #fff;
 			box-shadow:0 3px 6px rgba(0,0,0,0.1);
@@ -530,9 +530,14 @@ input:focus::-webkit-input-placeholder {
 		position:absolute;
 		background-color: #e7855b;
 		transition:0.2s ease;
-		width:80px;
+		width:90px;
 		right:5%;
 		top:70px;
+		padding:2px;
+		font-size: 8px;
+	}
+	.delete__todo p{
+		visibility: visible;
 		font-size: 8px;
 	}
 }
