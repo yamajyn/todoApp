@@ -56,6 +56,19 @@ todos
 |:-----------|:------------|:-------------|:-----------|:-----------|:-----------|
 | INT        | INT         | TEXT         |DATE        | DATETIME   | TINYINT    |  
 
+### エスケープ処理
+```javascript
+var query = 'INSERT INTO lists (title, created_at) VALUES (?,?)';
+var parameters = [title,createdAt];
+connection.query(query, parameters, function(err, rows) {
+  alartRender("リストを作成しました",res);
+});
+```
+
+第二引数に渡した値はエスケープされる  
+[Node.jsでMySQLを使うメモ](http://qiita.com/PianoScoreJP/items/7ed172cd0e7846641e13)
+
+
 
 ## 開発環境のセットアップ　　
 
