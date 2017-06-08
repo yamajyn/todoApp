@@ -4,9 +4,9 @@ ToDoを管理するWEBアプリケーション
 
 
 ## 開発環境　
-macOS Sierra  v10.12.4
-Node.js v7.10.0
-safari v10.1
+macOS Sierra  v10.12.4  
+Node.js v7.10.0  
+safari v10.1  
 ## フレームワーク
 Express v4.15.0
 ## template engine
@@ -58,7 +58,7 @@ todos
 
 
 
-  
+
 ### エスケープ処理
 ```javascript
 var query = 'INSERT INTO lists (title, created_at) VALUES (?,?)';
@@ -70,7 +70,7 @@ connection.query(query, parameters, function(err, rows) {
 SQL文中にクエスチョンマークを指定  
 第二引数に配列を指定してあげると、?に入る  
 第二引数に渡したparametersはエスケープされる  
-[Node.jsでMySQLを使うメモ](http://qiita.com/PianoScoreJP/items/7ed172cd0e7846641e13)  
+[Node.jsでMySQLを使うメモ](http://qiita.com/PianoScoreJP/items/7ed172cd0e7846641e13)
 
 
 
@@ -80,56 +80,60 @@ SQL文中にクエスチョンマークを指定
 
 ### nvmのインストール  
 
-`$ git clone https://github.com/creationix/nvm.git ~/.nvm`
-
-`$ source ~/.nvm/nvm.sh`  
+```
+$ git clone https://github.com/creationix/nvm.git ~/.nvm  
+$ source ~/.nvm/nvm.sh
+```
 
 ### nvmコマンドでnode.jsをインストール  
 
 `$ nvm install 7.9.0`
 
-express-generatorの導入
-`$ npm i -g express-generator`
+express-generatorの導入  
+`$ npm i -g express-generator`  
 
-expressの雛形アプリを作成
-`$ express -e`
 
-必要なnode_modulesをinstall
+expressの雛形アプリを作成  
+`$ express -e`  
+
+必要なnode_modulesをinstall  
 `$ cd . && npm install `
 
 ## 追加したモジュール
 
 ### モジュール　　
 
-[nodemon](https://github.com/remy/nodemon)    
-ファイル更新時に自動でローカルサーバーを再起動してくれるmodule
+[nodemon](https://github.com/remy/nodemon)  
+ファイル更新時に自動でローカルサーバーを再起動してくれるmodule  
 `$ npm i -g nodemon`
 
-[ejs-locals](https://github.com/RandomEtc/ejs-locals)
-部品を共通化するためのmodule
+[ejs-locals](https://github.com/RandomEtc/ejs-locals)  
+部品を共通化するためのmodule  
 `$ npm install ejs-locals --save`
 
 ### ライブラリ  
 
 [Moment.js](http://momentjs.com)  
-日付取得のライブラリ
+日付取得のライブラリ  
 `$ npm i -S moment`  
 
 [Mysql](https://github.com/mysqljs/mysql)  
-mysql接続のためのライブラリ
+mysql接続のためのライブラリ  
 `$ npm install --save mysql`  
 
 ## サーバー起動  
-プロジェクトのディレクトリに移動後
-`$ nodemon todoApp`  
-で起動  
+プロジェクトのディレクトリに移動後  
+`$ nodemon todoApp`  
+で起動  
 
-もしくは  
-`$ node ./bin/www`  
-で起動
+もしくは  
+`$ node ./bin/www`  
+で起動  
 
-ブラウザから
-`localhost:3000`に接続  
+ブラウザから  
+`localhost:3000`  
+
+に接続  
 
 ## 独自機能
 
