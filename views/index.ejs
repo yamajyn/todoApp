@@ -1,50 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="format-detection" content="telephone=no">
-<title><%= title %></title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body ontouchstart="">
 <% layout('layout') %>
-  <p class="main-title"><%= title %></p>
-  <!-- リスト追加時のエラー表示 -->
-  <% if (typeof inputError !== 'undefined') { %>
-      <div class="error-wrapper">
-        <div class="error"><%= inputError %></div>
-      </div>
-  <%}%>
-  <!-- リスト一覧-->
-  <ul class="main-list">
-    <li class="main-list__item">
-      <% lists.forEach(function(listItem) { %>
-        <a href="/todos/<%= listItem.list_id %>" class="list">
-          <p class="list__title"><%= listItem.title %></p>
-          <p class="list__date">作成:<%= listItem.created_at %></p>
-          <!-- 期限　-->
-          <% if(listItem.timelimit != null){%>
-            <p class="todo__date">期限:<%= listItem.timelimit %></p>
-          <%}%>
-          <!-- 完了したtodoの数　-->
-          <% if(listItem.count>0){%>
-            <p class="todo__done"><%= listItem.done %></p>
-            <p class="slash">/</p>
-            <p class="todo__count"><%= listItem.count %></p>
-          <%}%>
+<p class="main-title"><%= title %></p>
+<% /* リスト追加時のエラー表示 */ %>
+<% if (typeof inputError !== 'undefined') { %>
+    <div class="error-wrapper">
+      <div class="error"><%= inputError %></div>
+    </div>
+<%}%>
+<% /* リスト一覧 */ %>
+<ul class="main-list">
+  <li class="main-list__item">
+    <% lists.forEach(function(listItem) { %>
+      <a href="/todos/<%= listItem.list_id %>" class="list">
+        <p class="list__title"><%= listItem.title %></p>
+        <p class="list__date">作成:<%= listItem.created_at %></p>
+        <% /* todoの期限 */ %>
+        <% if(listItem.timelimit != null){%>
+          <p class="todo__date">期限:<%= listItem.timelimit %></p>
+        <%}%>
+        <% /* 完了したtodoの数 */ %>
+        <% if(listItem.count>0){%>
+          <p class="todo__done"><%= listItem.done %></p>
+          <p class="slash">/</p>
+          <p class="todo__count"><%= listItem.count %></p>
+        <%}%>
 
-        </a>
-      <% }); %>
-    </li>
-    <!-- 作成フォーム-->
-    <li>
-      <form action="/" method="post" class="list-form">
-        <input type="text" name="title" class="input" placeholder="新しいリスト" required>
-        <button type="submit" class="submit">+ make list +</button>
-      </form>
-    </li>
-  </ul>
-
-</body>
-</html>
+      </a>
+    <% }); %>
+  </li>
+  <% /*作成フォーム */ %>
+  <li>
+    <form action="/" method="post" class="list-form">
+      <input type="text" name="title" class="input" placeholder="新しいリスト" required>
+      <button type="submit" class="submit">+ make list +</button>
+    </form>
+  </li>
+</ul>

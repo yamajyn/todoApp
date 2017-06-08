@@ -8,14 +8,14 @@
   <link rel='stylesheet' href='/stylesheets/style.css'>
 </head>
 <body ontouchstart="">
-	<% layout('layout') %>
-	<div class="error-wrapper" style = "margin-top:100px;">
-		<div class="error">  <%= what %> "<%= title %>" は<%= comment %></div>
-	</div>
+  <% layout('layout') %>
+  <div class="error-wrapper" style = "margin-top:100px;">
+    <div class="error">  <%= what %> "<%= title %>" は<%= comment %></div>
+  </div>
   <% if(what == "ToDoリスト"){ %>
     <a href="/" class="btn"><p>トップへもどる</p></a>
   <%}else{%>
-    <a href="/todos/<%= list.list_id %>" class="btn"><p>リスト <%= list.title %> へ戻る</p></a>
+      <a href="/todos/<%= list.list_id %>" class="btn"><p>リスト <%= list.title %> へ戻る</p></a>
   <%}%>
 </body>
 </html>
