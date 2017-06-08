@@ -144,7 +144,7 @@ input:-webkit-autofill, textarea:-webkit-autofill {
 		box-shadow:0 3px 6px rgba(0,0,0,0.1);
 		border-radius: 25px 0;
 		float:left;
-		overflow: scroll;
+		overflow: hidden;
 		transition:0.3s ease;
 }
 .list:hover{
