@@ -56,6 +56,9 @@ todos
 |:-----------|:------------|:-------------|:-----------|:-----------|:-----------|
 | INT        | INT         | TEXT         |DATE        | DATETIME   | TINYINT    |  
 
+
+
+  
 ### エスケープ処理
 ```javascript
 var query = 'INSERT INTO lists (title, created_at) VALUES (?,?)';
@@ -65,7 +68,7 @@ connection.query(query, parameters, function(err, rows) {
 });
 ```
 SQL文中にクエスチョンマークを指定
-第二引数に配列を指定してあげると、?に入る  
+第二引数に配列を指定してあげると、?に入る
 第二引数に渡したparametersはエスケープされる
 [Node.jsでMySQLを使うメモ](http://qiita.com/PianoScoreJP/items/7ed172cd0e7846641e13)
 
