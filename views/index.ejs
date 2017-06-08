@@ -16,7 +16,7 @@
         <p class="list__title"><%= listItem.title %></p>
         <p class="list__date">作成:<%= listItem.created_at %></p>
         <% /* todoの期限 */ %>
-        <% if(listItem.timelimit != null){%>
+        <% if(listItem.timelimit !== null){%>
           <p class="todo__date">期限:<%= listItem.timelimit %></p>
         <%}%>
         <% /* 完了したtodoの数 */ %>

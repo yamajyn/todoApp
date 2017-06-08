@@ -1,6 +1,8 @@
 var mysql = require('mysql');
 var connection;
 
+
+
 if(process.env.NODE_ENV === "production" ){
   //リリース用
   var dbConfig = {
@@ -10,6 +12,7 @@ if(process.env.NODE_ENV === "production" ){
     database: 'heroku_4d5fb8a6ef36520'
   };
   connection = mysql.createConnection(dbConfig);
+  console.log("SUCSESS CONNECT SERVER DB");
   //HerokuのMySQLのためのハック
   setInterval(function() {
     connection.query('SELECT 1');
@@ -23,6 +26,7 @@ if(process.env.NODE_ENV === "production" ){
     database: 'todo_list'
   };
   connection = mysql.createConnection(dbConfig);
+  console.log("SUCSESS CONNECT LOCAL DB");
 }
 
 module.exports = connection;

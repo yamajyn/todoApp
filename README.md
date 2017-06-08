@@ -1,12 +1,12 @@
-# [todoApp](https://todo-app-yamaj.herokuapp.com)  
+# [todoApp](https://todo-app-yamaj.herokuapp.com)
 ToDoを管理するWEBアプリケーション
 ![todoトップ](https://github.com/yamaj/todoApp/blob/master/readmeImages/todo_top.png)  
 
 
 ## 開発環境　
-macOS Sierra  v10.12.4  
-Node.js v7.10.0  
-safari v10.1  
+macOS Sierra  v10.12.4
+Node.js v7.10.0
+safari v10.1
 ## フレームワーク
 Express v4.15.0
 ## template engine
@@ -54,7 +54,7 @@ todos
 
 | list_id    | todo_id     | todo         | timelimit  |created_at  | done       |
 |:-----------|:------------|:-------------|:-----------|:-----------|:-----------|
-| INT        | INT         | TEXT         |DATE        | DATETIME   | TYNYINT    |  
+| INT        | INT         | TEXT         |DATE        | DATETIME   | TINYINT    |  
 
 
 ## 開発環境のセットアップ　　
@@ -69,28 +69,28 @@ todos
 
 ### nvmコマンドでnode.jsをインストール  
 
-`$ nvm install 7.9.0`  
+`$ nvm install 7.9.0`
 
-express-generatorの導入  
-`$ npm i -g express-generator` 
+express-generatorの導入
+`$ npm i -g express-generator`
 
-expressの雛形アプリを作成  
-`$ express -e`  
+expressの雛形アプリを作成
+`$ express -e`
 
-必要なnode_modulesをinstall  
-`$ cd . && npm install `  
+必要なnode_modulesをinstall
+`$ cd . && npm install `
 
 ## 追加したモジュール
 
 ### モジュール　　
 
 [nodemon](https://github.com/remy/nodemon)    
-ファイル更新時に自動でローカルサーバーを再起動してくれるmodule  
-`$ npm i -g nodemon`  
+ファイル更新時に自動でローカルサーバーを再起動してくれるmodule
+`$ npm i -g nodemon`
 
-[ejs-locals](https://github.com/RandomEtc/ejs-locals)  
-部品を共通化するためのmodule  
-`$ npm install ejs-locals --save`  
+[ejs-locals](https://github.com/RandomEtc/ejs-locals)
+部品を共通化するためのmodule
+`$ npm install ejs-locals --save`
 
 ### ライブラリ  
 

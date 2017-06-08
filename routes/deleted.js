@@ -5,12 +5,12 @@ var connection = require('../mysqlConnection');
 //リスト削除
 router.get('/:list_id', function(req, res, next) {
   var listId = req.params.list_id;
-  var query = 'SELECT * FROM lists WHERE list_id = ' + listId;
-  var deleteListQuery = 'DELETE FROM lists WHERE list_id = ' + listId;
-  var deleteTodoQuery = 'DELETE FROM todos WHERE list_id = ' + listId;
-  connection.query(query, function(err, list) {
-    connection.query(deleteListQuery, function(err) {
-      connection.query(deleteTodoQuery, function(err) {
+  var query = 'SELECT * FROM lists WHERE list_id = ?';
+  var deleteListQuery = 'DELETE FROM lists WHERE list_id = ?';
+  var deleteTodoQuery = 'DELETE FROM todos WHERE list_id = ?';
+  connection.query(query, listId, function(err, list) {
+    connection.query(deleteListQuery, listId, function(err) {
+      connection.query(deleteTodoQuery, listId, function(err) {
         console.log(list);
         res.render('deleted', {
           what:"ToDoリスト",
@@ -26,12 +26,12 @@ router.get('/:list_id', function(req, res, next) {
 router.get('/:list_id/:todo_id', function(req, res, next) {
   var listId = req.params.list_id;
   var todoId = req.params.todo_id;
-  var getListQuery = 'SELECT * FROM lists WHERE list_id = ' + listId;
-  var getTodoQuery = 'SELECT * FROM todos WHERE todo_id = ' + todoId;
-  var deleteTodoQuery = 'DELETE FROM todos WHERE todo_id = ' + todoId;
-  connection.query(getListQuery, function(err, list) {
-    connection.query(getTodoQuery, function(err, todo) {
-      connection.query(deleteTodoQuery, function(err) {
+  var getListQuery = 'SELECT * FROM lists WHERE list_id = ?';
+  var getTodoQuery = 'SELECT * FROM todos WHERE todo_id = ?';
+  var deleteTodoQuery = 'DELETE FROM todos WHERE todo_id = ?';
+  connection.query(getListQuery, listId, function(err, list) {
+    connection.query(getTodoQuery, todoId, function(err, todo) {
+      connection.query(deleteTodoQuery, todoId, function(err) {
         console.log(list);
         res.render('deleted', {
           what: "todo",

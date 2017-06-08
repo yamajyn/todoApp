@@ -4,7 +4,7 @@
 <div class="error-wrapper" style = "margin-top:100px;">
   <div class="error">  <%= what %> "<%= todo %>" は<%= comment %></div>
 </div>
-<% if(what == "ToDoリスト"){ %>
+<% if(what === "ToDoリスト"){ %>
   <a href="/" class="btn"><p>トップへもどる</p></a>
 <%}else{%>
     <a href="/todos/<%= list.list_id %>" class="btn"><p>リスト <%= list.title %> へ戻る</p></a>

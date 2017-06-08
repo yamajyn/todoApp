@@ -20,15 +20,16 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   var title = req.body.title;
-  console.log(title.length);
-  if(title.length = 0){
+  if(title.length === 0){
     alartRender("文字を入力してください",res);
   }else if(title.length>30){
     alartRender("リスト名は30文字以内にしてください  ("　+ title.length + "文字)",res);
   }else{
     var createdAt = moment().format('YYYY-MM-DD HH:mm:ss');
-    var query = 'INSERT INTO lists (title, created_at) VALUES ("' + title + '", ' + '"' + createdAt + '")';
-    connection.query(query, function(err, rows) {
+    //エスケープ処理
+    var query = 'INSERT INTO lists (title, created_at) VALUES (?,?)';
+    var parameters = [title,createdAt];
+    connection.query(query, parameters, function(err, rows) {
       alartRender("リストを作成しました",res);
     });
   }

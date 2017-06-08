@@ -21,7 +21,7 @@
       <% });%>
       </ul>
     <% /* listがない時のエラー表示 */ %>
-    <%}else if(search != ''){%>
+    <%}else if(search !== ''){%>
       <div class="error-wrapper">
       <p class="error"><%= noList %></p>
       </div>
@@ -57,7 +57,7 @@
         </li>
       <% }); %>
       <% /* todoがない時のエラー表示 */ %>
-    <% }else if(search != ''){%>
+    <% }else if(search !== ''){%>
       <div class="error-wrapper">
       <div class="error"><%= noTodo %></div>
       </div>
