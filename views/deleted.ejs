@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <title>削除完了 | <%= title %></title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <link rel='stylesheet' href='/stylesheets/style.css'>
-</head>
-<body ontouchstart="">
-  <% layout('layout') %>
-  <div class="error-wrapper" style = "margin-top:100px;">
-    <div class="error">  <%= what %> "<%= title %>" は<%= comment %></div>
-  </div>
-  <% if(what == "ToDoリスト"){ %>
-    <a href="/" class="btn"><p>トップへもどる</p></a>
-  <%}else{%>
-      <a href="/todos/<%= list.list_id %>" class="btn"><p>リスト <%= list.title %> へ戻る</p></a>
-  <%}%>
-</body>
-</html>
+<% /* 検索画面 */ %>
+<% layout('layout') %>
+
+<div class="error-wrapper" style = "margin-top:100px;">
+  <div class="error">  <%= what %> "<%= todo %>" は<%= comment %></div>
+</div>
+<% if(what == "ToDoリスト"){ %>
+  <a href="/" class="btn"><p>トップへもどる</p></a>
+<%}else{%>
+    <a href="/todos/<%= list.list_id %>" class="btn"><p>リスト <%= list.title %> へ戻る</p></a>
+<%}%>

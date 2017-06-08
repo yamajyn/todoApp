@@ -14,7 +14,7 @@ router.get('/:list_id', function(req, res, next) {
         console.log(list);
         res.render('deleted', {
           what:"ToDoリスト",
-          title: list[0].title,
+          title: "削除完了 | " + list[0].title,
           comment:"正常に削除されました",
           list: list[0]
         });
@@ -35,7 +35,8 @@ router.get('/:list_id/:todo_id', function(req, res, next) {
         console.log(list);
         res.render('deleted', {
           what: "todo",
-          title: todo[0].todo,
+          title: "削除完了 | " + todo[0].todo,
+          todo: todo[0].todo,
           comment:"正常に削除されました",
           list: list[0]
         });

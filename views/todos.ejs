@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <title>Todo | <%= title %></title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <link rel='stylesheet' href='/stylesheets/style.css'>
-</head>
-<body ontouchstart="">
+<% /* todo詳細画面 */ %>
 <% layout('layout') %>
+
 <p class="main-title" ><%= title %></p>
-<!-- 削除ボタン -->
+<% /* 削除ボタン */ %>
 <a href="/deleted/<%= list.list_id %>">
   <button type="submit" name="delete" value="<%= list.list_id %>" class="submit delete">
     <p>このリストを削除する</p>
@@ -18,7 +10,7 @@
 </a>
 
 <% if (todoList.length) { %>
-  <!-- todo一覧 -->
+  <% /* todo一覧 */ %>
   <ul class="main-list">
     <% todoList.forEach(function(todoItem) { %>
       <li class="main-list__item">
@@ -27,14 +19,14 @@
         <p class="list__date">作成:<%= todoItem.created_at %></p>
         <p class="todo__date">期限:<%= todoItem.timelimit %></p>
 
-        <!-- todo削除ボタン -->
+        <% /* todo削除ボタン */ %>
         <a href="/deleted/<%= list.list_id %>/<%= todoItem.todo_id %>">
           <button type="submit" name="delete" value="<%= todoItem.todo_id %>" class="delete__todo">
             <p>削除</p>
           </button>
         </a>
 
-        <!-- 完了・未完了ボタン -->
+        <% /* 完了・未完了ボタン */ %>
         <form action="/todos/<%= list.list_id %>" method="post">
           <% if (todoItem.done) { %>
             <button type="submit" name="done" value="<%= todoItem.todo_id %>" class="submit comp-btn comp">
@@ -49,7 +41,7 @@
         </div>
       </li>
     <% }); %>
-    <!-- todo追加フォーム -->
+    <% /* todo追加フォーム */ %>
     <li>
       <form action="/todos/<%= list.list_id %>" method="post" class="todo-form">
         <input type="text" name="todo" class="input" placeholder="新しいToDo" autofocus required>
@@ -57,7 +49,7 @@
         <button type="submit" class="submit comp-btn">追加</button>
       </form>
     </li>
-    <!-- 戻るボタン -->
+    <% /* 戻るボタン */ %>
     <li>
       <a href="/" class="btn"><p>トップへもどる</p></a>
     </li>
@@ -67,12 +59,12 @@
 
 
 
-<!-- todoがない時のエラー表示 -->
+<% /* todoがない時のエラー表示 */ %>
 <% if (typeof noTodo !== 'undefined') { %>
     <div class="error-wrapper">
       <div class="error"><%= noTodo %></div>
     </div>
-    <!-- todo追加フォーム -->
+    <% /* todo追加フォーム */ %>
     <ul class="main-list" style="margin-top:20px;">
       <li class="main-list__item">
         <form action="/todos/<%= list.list_id %>" method="post" class="todo-form">
@@ -84,5 +76,3 @@
     </ul>
     <a href="/" class="btn"><p>トップへもどる</p></a>
 <% } %>
-</body>
-</html>
